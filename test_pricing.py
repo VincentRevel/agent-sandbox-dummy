@@ -19,6 +19,13 @@ class TestPricing(unittest.TestCase):
     def test_non_round_price_small(self):
         self.assertEqual(apply_discount(9.99, 10), 8.99)
 
+    def test_hundred_percent_is_free(self):
+        self.assertEqual(apply_discount(100, 100), 0)
+
+    def test_over_hundred_percent_rejected(self):
+        with self.assertRaises(ValueError):
+            apply_discount(100, 100.01)
+
 
 if __name__ == "__main__":
     unittest.main()
