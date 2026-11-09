@@ -3,4 +3,6 @@
 
 def apply_discount(price, percent):
     """Return the price after a percent discount, rounded to 2 decimals."""
+    if percent < 0:
+        raise ValueError("discount must not be negative")
     return round(price - price * percent / 100, 2)
