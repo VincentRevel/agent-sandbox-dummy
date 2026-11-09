@@ -1,0 +1,4 @@
+- Work on a branch named agent/<short-task>.
+- Run tests with: python3 -m unittest
+- Open a PR with gh. Never merge. Never push to main.
+- Do not read or modify files outside this repo.
